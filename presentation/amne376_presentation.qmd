@@ -1,33 +1,65 @@
 ---
-title: "Course Name"
-subtitle: "Project Name"
-author: "John Smith"
+title: "AMNE 376"
+subtitle: "Computational Studies of Greek Art and Architecture: A Machine Learning Approach"
+author: "Kaiyan Zhang, Krishaant Pathman, Irene Berezin"
 format: revealjs
 scrollable: true
 fontsize: 220%
 ---
 
 ## Introduction
-This is a revealjs slide template for the project presentation you can follow the [link](https://quarto.org/docs/presentations/revealjs/) to get more details 
+
+In exploring Ancient Greek art and architecture, we often rely on established interpretations rooted in classical scholarship. However, **contemporary methodologies** in archaeology and art history invite us to reconsider these works through fresh perspectives. As anthropologist Clifford Geertz noted 
+
+> *"Cultural analysis is not about finding universal truths, but about appreciating the diversity and complexity of human experience."* 
+
+New approaches encourage us to delve into the nuanced contexts and varied meanings that classical artworks may embody.
+
+By integrating modern analytical techniques, we can uncover layers of significance in Greek art that traditional methods might overlook. This course will employ such **interdisciplinary strategies** to deepen our understanding of ancient works, revealing the dynamic interplay between form, function, and cultural expression in classical antiquity.
 
 
-## Notebook Example: [Demo](www.123.com)
+
+## Notebook 1: Introduction to CNN and Image Embedding
 
 **Learning Outcomes**: Through this class, students will
-- A
-- B 
-- C
+
+- understand how computers process visual input
+- understand convolutional neural networks (CNNs) and how they extract abstract features from images
+- understand the basic forms of image embedding through visual representation and their applications
+- practice basic image embedding techniques using a dataset of Greek artworks
+- discuss the differences between how computers understand art and how humans understand art, and whether this cognitive model is useful in art history research.
 
 ## Class Structure
 
-### Part A
-
-### Part B
+- **Dataset**: We will provide students with an image dataset with Greek artworks of different categories, downloaded from [Harvard Art Museum Collections](https://harvardartmuseums.org/collections).
+- Provided computational resources permit, we will provide students with code templates and let them run the code themselves. If time permits, they can also try to embed other images they are interested in.
+- We will begin by introducing the basic image loading and the traditional image representations through **color histograms** to demonstrate the basic concepts of image features to students.
+- For image embedding task, the notebook will use **[OpenAI CLIP](https://huggingface.co/openai/clip-vit-base-patch32)** base patch model, and focus solely on its applications instead of its principles, the key ideas will all be presented through visualizations (scatterplots, histograms and the image itself).
+- We will refer to ideas from the book *Computational Formalism: Art History and Machine Learning* by Amanda Wasielewski to demonstrate some interesting applications of machine learning in visual art studies.
+- We will briefly introduce the key applications here and elaborate on them in subsequent notes, including **similarity analysis**, **cluster analysis**, and **classification analysis**.
 
 ## Key Features and Results
 
-Show image by
+- Practical and General Concepts
 
-![](image.png){.absolute top=0 left=0 height="230" width="200"}
+::: {.column width="60%"}
+![](images/CNN_example.jpg)
+:::
+
+- Connecting to Cutting-edge Research
+
+<div style="font-size: 80%;">
+&nbsp;&nbsp;&nbsp;&nbsp; Wasielewski, A. (2023). Computational Formalism: Art History and Machine Learning. The MIT Press. <https://doi.org/10.7551/mitpress/14268.001.0001>
+</div>
+
+ <div style="font-size: 80%;">
+&nbsp;&nbsp;&nbsp;&nbsp; Wang, J. Z., & Adams, R. B., Jr. (Eds.). (2024). Modeling visual aesthetics, emotion, and artistic style. Springer. <https://doi.org/10.1007/978-3-031-50269-9>
+</div>
+
+
+<!-- ![](image.png){.absolute top=0 left=0 height="230" width="200"} -->
 
 ## Reference
+
+- [Pinecone: Embedding Methods for Image Search](https://www.pinecone.io/learn/series/image-search/)
+- Wasielewski, A. (2023). Computational Formalism: Art History and Machine Learning. The MIT Press. <https://doi.org/10.7551/mitpress/14268.001.0001>
