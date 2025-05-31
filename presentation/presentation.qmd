@@ -1,0 +1,9 @@
+---
+title: "AMNE 170/376"
+subtitle: "integrating machine learning into archeological research"
+author: "Irene Berezin, Yash Mali, Anna Kovtune"
+format: revealjs
+scrollable: true
+fontsize: 220%
+---
+## Introduction
