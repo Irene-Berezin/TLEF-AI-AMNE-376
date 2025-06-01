@@ -1,5 +1,5 @@
 ---
-title: "AMNE 170/376"
+title: "AMNE 170"
 subtitle: "integrating machine learning into archeological research"
 author: "Irene Berezin, Yash Mali, Anna Kovtune"
 format: revealjs
