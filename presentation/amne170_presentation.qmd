@@ -1,9 +1,27 @@
 ---
 title: "AMNE 170"
 subtitle: "integrating machine learning into archeological research"
-author: "Irene Berezin, Yash Mali, Anna Kovtune"
-format: revealjs
+author: "Irene Berezin, Yash Mali, Nathan Zhang"
+format: 
+    revealjs:
+        css: fig_captions.scss
 scrollable: true
-fontsize: 220%
+fontsize: 180%
 ---
 ## Introduction
+
+
+## Notebook 2: Classification and translation of cuneiform tablets using Machine Learning
+
+ Cuneiform is one of the world’s oldest writing systems, invented by Sumerian scribes around 3200 BCE in what is now southern-Iraq. Over time, the writing system was adapted to write multiple languages and covered diverse content, such a economic transactions, songs, legal decrees, and even prescriptions (). Using machine learning, we can identify patterns in the contents of cuneiform tablets, and uncover how those patterns evolve across regions and time. 
+
+
+:::{.columns}
+::: {.column width="100%"}
+![Image source: Kapon et al., 2024](images/cuneiform_tablets.png){fig-align="center" width="80%"}
+:::
+:::
+
+
+
+ The Cuneiform Digital Library Initiative (CDLI) is a catalog hundreds of thousands of tablets with images and metadata 
