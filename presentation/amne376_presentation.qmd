@@ -39,7 +39,7 @@ By integrating modern analytical techniques, we can uncover layers of significan
 - We will refer to ideas from the book *Computational Formalism: Art History and Machine Learning* by Amanda Wasielewski to demonstrate some interesting applications of machine learning in visual art studies.
 - We will briefly introduce the key applications here and elaborate on them in subsequent notes, including **similarity analysis**, **cluster analysis**, and **classification analysis**.
 
-## Key Features and Results
+## Key Features
 
 - Basic, Practical and Generalizable Concepts in Multi-fields
 
@@ -84,7 +84,7 @@ By integrating modern analytical techniques, we can uncover layers of significan
 - We will then show how we can discover the **principal component** of the embeddings representing the century or genre of sculptures through image classification. 
 - Then based on the created embeddings, we will demonstrate how we can summarize the extracted **Bag of Visual Words** into human-readable language using large language models.
 
-## Key Features and Results
+## Key Features
 
 - Continuation of the Previous Topic with a Practical Example
 
@@ -109,8 +109,55 @@ Source: Harvard Art Museum
                                                                 -- Computational Formalism: Art History and Machine Learning
 </div>
 
+## Notebook 3: Introduction to AI Assisted Restoration of Archaeological Objects
+
+**Learning Outcomes**: Through this class, students will
+
+- understand the principles of AI restoration and reconstruction of images (image generating and inpainting)
+- understand how we train and verify the accuracy of AI restoration models
+- understand how we can extend the knowledge of 2D image processing to 3D
+- explore a dataset of vessel and coin fragments, and apply a pre-trained generative AI model to reconstruct the objects if computational resources permit
+- discuss the underlying risk and bias in using AI for archaeological restoration
+
+## Class Structure
+
+- **Dataset:** We will provide students with an image dataset of Greek vessels and coin fragments, as well as complete objects that have been intentionally obscured for verification purposes.
+- We will introduce the concept of **image inpainting** and **generative models** (such as diffusion models or GANs) for reconstructing missing parts of archaeological objects.
+- Students will observe how a **pre-trained generative AI model** can reconstruct missing sections of an artifact from its fragment image, and compare the AI-generated reconstruction with the original complete object.
+- If computational resources allow, students can experiment with reconstructing different fragments or adjusting model parameters to see how the results change.
+- We will also discuss the limitations and ethical considerations of AI-based reconstructions in archaeology, including accuracy, authenticity, and interpretive risks.
+
+## Key Features
+
+- A More Visually Vivid and Interesting Case
+
+:::{.column width="70%"}
+![](images/ai_reconstruction_example.jpg)
+:::
+<div style="font-size: 60%;">
+Source: Stoean _et al_ (2024)
+</div>
+
+- Introduction to a Future Trend in Archaeological Restoration
+
+:::{.columns}
+:::{.column width="50%"}
+![](images/ai_assist_gif_example.gif)
+:::
+
+:::{.column width="50%"}
+![](images/ai_assist_gif_example2.gif)
+:::
+:::
+
+- A Practical Approach to the Application of Knowledge Accumulation and Archaeological Ethics
+
+
+
 ## Reference
 
 - [Pinecone: Embedding Methods for Image Search](https://www.pinecone.io/learn/series/image-search/)
 - Wasielewski, A. (2023). Computational Formalism: Art History and Machine Learning. The MIT Press. <https://doi.org/10.7551/mitpress/14268.001.0001>
 - Wang, J. Z., & Adams, R. B., Jr. (Eds.). (2024). Modeling Visual Aesthetics, Emotion, and Artistic Style. Cham, Switzerland: Springer Nature. <https://doi.org/10.1007/978-3-031-50269-9>
+- Stoean, R., Bacanin, N., Stoean, C., & Ionescu, L. (2024). Bridging the past and present: AI-driven 3D restoration of degraded artefacts for museum digital display. Journal of Cultural Heritage, 69, 18-26. <https://doi.org/10.1016/j.culher.2024.07.008>
+- Cardarelli, L. (2024). From fragments to digital wholeness: An AI generative approach to reconstructing archaeological vessels. Journal of Cultural Heritage, 70, 250-258. <https://doi.org/10.1016/j.culher.2024.09.012>
