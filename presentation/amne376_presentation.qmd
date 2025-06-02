@@ -4,7 +4,8 @@ subtitle: "Computational Studies of Greek Art and Architecture: A Machine Learni
 author: "Kaiyan Zhang, Krishaant Pathman, Irene Berezin"
 format: revealjs
 scrollable: true
-fontsize: 220%
+fontsize: 200%
+theme: serif
 ---
 
 ## Introduction
@@ -40,10 +41,17 @@ By integrating modern analytical techniques, we can uncover layers of significan
 
 ## Key Features and Results
 
-- Practical and General Concepts
+- Basic, Practical and Generalizable Concepts in Multi-fields
 
-::: {.column width="60%"}
-![](images/CNN_example.jpg)
+
+:::{.columns}
+:::{.column width="35%"}
+![Color Histogram](images/color_histogram_example.png)
+:::
+
+::: {.column width="65%"}
+![Principles of CNN](images/CNN_example.jpg)
+:::
 :::
 
 - Connecting to Cutting-edge Research
@@ -59,7 +67,49 @@ By integrating modern analytical techniques, we can uncover layers of significan
 
 <!-- ![](image.png){.absolute top=0 left=0 height="230" width="200"} -->
 
+## Notebook 2: Introduction to Computational Formalism
+
+**Learning Outcomes**: Through this class, students will
+
+- understand the concept of **formalism** in the context of art studies
+- understand the basic techniques of **computational formalism** and describe how it differ from "traditional" formalism
+- explore an example of Greek artifacts, applying the methodology and interpret the result
+- critically analyze the pros and cons of formalism and computational formalism, and explain how to integrate these techniques with archaeology.
+
+## Class Structure
+
+- **Dataset:** We will provide students with a dataset of images of ancient Greek sculptures from the [Harvard Art Museums](https://harvardartmuseums.org/collections), covering different periods (from the 18th century BCE to the 4th century BCE), accompanied by metadata containing relevant information of these sculptures for students to explore.
+- We will first create the **image embedding** of this dataset using **[OpenAI CLIP](https://huggingface.co/openai/clip-vit-base-patch32)** base patch model, and cluster the images to see if any interesting patterns are observed. Here we would also introduce the concept of **Bag of Visual Words** that we create based on clustering.
+- We will then show how we can discover the **principal component** of the embeddings representing the century or genre of sculptures through image classification. 
+- Then based on the created embeddings, we will demonstrate how we can summarize the extracted **Bag of Visual Words** into human-readable language using large language models.
+
+## Key Features and Results
+
+- Continuation of the Previous Topic with a Practical Example
+
+:::{.columns}
+:::{.column width="25%"}
+![](images/greek_sculpture_example1.jpg)
+:::
+:::{.column width="45%"}
+![](images/greek_sculpture_example2.jpg)
+:::
+:::
+
+<div style="font-size: 60%;">
+Source: Harvard Art Museum
+</div>
+
+- Supplement to the Course's Original Context-based Classical Art Research Methods.
+
+<div style="font-size: 80%;">
+> Drawing from the analysis of machine learning in art history described in this book, one might begin to reimagine “digital” art history outside of the technology-specific paradigm in which it has been placed. 
+
+                                                                -- Computational Formalism: Art History and Machine Learning
+</div>
+
 ## Reference
 
 - [Pinecone: Embedding Methods for Image Search](https://www.pinecone.io/learn/series/image-search/)
 - Wasielewski, A. (2023). Computational Formalism: Art History and Machine Learning. The MIT Press. <https://doi.org/10.7551/mitpress/14268.001.0001>
+- Wang, J. Z., & Adams, R. B., Jr. (Eds.). (2024). Modeling Visual Aesthetics, Emotion, and Artistic Style. Cham, Switzerland: Springer Nature. <https://doi.org/10.1007/978-3-031-50269-9>
