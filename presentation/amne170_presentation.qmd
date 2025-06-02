@@ -1,0 +1,53 @@
+---
+title: "AMNE 170"
+subtitle: "integrating machine learning into archeological research"
+author: "Irene Berezin, Yash Mali, Nathan Zhang"
+format: 
+    revealjs:
+        css: fig_captions.scss
+scrollable: true
+fontsize: 180%
+---
+## Introduction
+
+
+## Notebook 2: Classification of cuneiform tablets using Machine Learning
+
+ Cuneiform is one of the world’s oldest writing systems, invented by Sumerian scribes around 3200 BCE in what is now southern-Iraq. Over time, the writing system was adapted to write multiple languages and covered diverse content, such a economic transactions, songs, legal decrees, and even prescriptions (). Using machine learning, we can identify patterns in the contents of cuneiform tablets, and uncover how those patterns evolve across regions and time. 
+
+
+:::{.columns}
+::: {.column width="100%"}
+![Image source: Kapon et al., 2024](images/cuneiform_tablets.png){fig-align="center" width="80%"}
+:::
+:::
+
+ The Cuneiform Digital Library Initiative (CDLI) is a catalog hundreds of thousands of tablets with images and metadata. We focus on a subset of that dataset specifically designed for machine learning (CuneiML), containing "38,947 high-resolution 2D photos of Sumerian and Akkadian cuneiform tablets, accompanied by their cuneiform Unicode transcriptions, transliterations, lineart, and metadata".
+
+---  
+
+## Learning objectives: 
+
+ - Understand how Machine learning tools can enrich or challenge existing archeological narratives by contrasting against older historical narratives (LO5).
+
+ - Understand how surface-level analyses can mislead both researchers and machine learning tools into making invalid historical arguments (LO4): Ex; Is a given tablet truely a economic text, or is it simply a legal text with economic language?
+ 
+ -  Learn to priotirize the importance of interpretations grounded in multiple lines of evidence such as linguistic markers and material context (LO5).
+
+ - Learn a bit more about the modern machine-learning techniques used to understand textual archeological data (LO1-LO3). 
+
+## Key Features and Results
+
+:::{.columns}
+::: {.column width="50%"}
+![Image source: Bogacz and Mara (2020)](images/predicting_time_period.png){width="100%"}
+:::
+
+::: {.column width="50%"}
+Using a pretrained convolutional neural network, students will be able to classify a wide collection of cuneiform tablets by their location of origin, approximate age, and topic inscribed in the tablets. Students would discover how models differentiate between different types of classes through various types of evidence (linguistic markers such as vocabulary and sentence structures, as well as visual markers such as tablet shape, clay textures, and color variation), and how all those pieces of evidence come together to form a concrete label.
+:::
+:::
+
+## Notebook 3: CNNs continued: using CNNs to find hidden archeological sites
+
+

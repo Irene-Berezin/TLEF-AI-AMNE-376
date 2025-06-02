@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="amne376_presentation_files/libs/clipboard/clipboard.min.js"></script>
-<script src="amne376_presentation_files/libs/quarto-html/tabby.min.js"></script>
-<script src="amne376_presentation_files/libs/quarto-html/popper.min.js"></script>
-<script src="amne376_presentation_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="amne376_presentation_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="amne376_presentation_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="amne376_presentation_files/libs/quarto-html/quarto-syntax-highlighting-48ffa3e5b9d089919c6712c39e5b00f2.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="amne170_presentation_files/libs/clipboard/clipboard.min.js"></script>
+<script src="amne170_presentation_files/libs/quarto-html/tabby.min.js"></script>
+<script src="amne170_presentation_files/libs/quarto-html/popper.min.js"></script>
+<script src="amne170_presentation_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="amne170_presentation_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="amne170_presentation_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="amne170_presentation_files/libs/quarto-html/quarto-syntax-highlighting-48ffa3e5b9d089919c6712c39e5b00f2.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.41">
 
-  <meta name="author" content="Kaiyan Zhang, Krishaant Pathman, Irene Berezin">
-  <title>AMNE 376</title>
+  <meta name="author" content="Irene Berezin, Yash Mali, Nathan Zhang">
+  <title>AMNE 170</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="amne376_presentation_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="amne376_presentation_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="amne170_presentation_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="amne170_presentation_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -29,12 +29,12 @@
       vertical-align: middle;
     }
   </style>
-
-  <link rel="stylesheet" href="amne376_presentation_files/libs/revealjs/dist/theme/quarto-06273e61f1f04043d27f5a4ba8912ce7.css">
-  <link href="amne376_presentation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="amne376_presentation_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="amne376_presentation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="amne376_presentation_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="amne170_presentation_files/libs/revealjs/dist/theme/quarto-1aad10c3c84ecd8b0758ab35bab1eb51.css">
+  <link rel="stylesheet" href="fig_captions.scss">
+  <link href="amne170_presentation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="amne170_presentation_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="amne170_presentation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="amne170_presentation_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -129,13 +129,13 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">AMNE 376</h1>
-  <p class="subtitle">Computational Studies of Greek Art and Architecture: A Machine Learning Approach</p>
+  <h1 class="title">AMNE 170</h1>
+  <p class="subtitle">integrating machine learning into archeological research</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Kaiyan Zhang, Krishaant Pathman, Irene Berezin 
+Irene Berezin, Yash Mali, Nathan Zhang 
 </div>
 </div>
 </div>
@@ -143,117 +143,46 @@ Kaiyan Zhang, Krishaant Pathman, Irene Berezin
 </section>
 <section id="introduction" class="slide level2">
 <h2>Introduction</h2>
-<p>In exploring Ancient Greek art and architecture, we often rely on established interpretations rooted in classical scholarship. However, <strong>contemporary methodologies</strong> in archaeology and art history invite us to reconsider these works through fresh perspectives. As anthropologist Clifford Geertz noted</p>
-<blockquote>
-<p><em>“Cultural analysis is not about finding universal truths, but about appreciating the diversity and complexity of human experience.”</em></p>
-</blockquote>
-<p>New approaches encourage us to delve into the nuanced contexts and varied meanings that classical artworks may embody.</p>
-<p>By integrating modern analytical techniques, we can uncover layers of significance in Greek art that traditional methods might overlook. This course will employ such <strong>interdisciplinary strategies</strong> to deepen our understanding of ancient works, revealing the dynamic interplay between form, function, and cultural expression in classical antiquity.</p>
 </section>
-<section id="notebook-1-introduction-to-cnn-and-image-embedding" class="slide level2">
-<h2>Notebook 1: Introduction to CNN and Image Embedding</h2>
-<p><strong>Learning Outcomes</strong>: Through this class, students will</p>
-<ul>
-<li>understand how computers process visual input</li>
-<li>understand convolutional neural networks (CNNs) and how they extract abstract features from images</li>
-<li>understand the basic forms of image embedding through visual representation and their applications</li>
-<li>practice basic image embedding techniques using a dataset of Greek artworks</li>
-<li>discuss the differences between how computers understand art and how humans understand art, and whether this cognitive model is useful in art history research.</li>
-</ul>
+<section id="notebook-2-classification-of-cuneiform-tablets-using-machine-learning" class="slide level2">
+<h2>Notebook 2: Classification of cuneiform tablets using Machine Learning</h2>
+<p>Cuneiform is one of the world’s oldest writing systems, invented by Sumerian scribes around 3200 BCE in what is now southern-Iraq. Over time, the writing system was adapted to write multiple languages and covered diverse content, such a economic transactions, songs, legal decrees, and even prescriptions (). Using machine learning, we can identify patterns in the contents of cuneiform tablets, and uncover how those patterns evolve across regions and time.</p>
+<div class="columns">
+<div class="column" style="width:100%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/cuneiform_tablets.png" style="width:80.0%"></p>
+<figcaption>Image source: Kapon et al., 2024</figcaption>
+</figure>
+</div>
+</div></div>
+<p>The Cuneiform Digital Library Initiative (CDLI) is a catalog hundreds of thousands of tablets with images and metadata. We focus on a subset of that dataset specifically designed for machine learning (CuneiML), containing “38,947 high-resolution 2D photos of Sumerian and Akkadian cuneiform tablets, accompanied by their cuneiform Unicode transcriptions, transliterations, lineart, and metadata”.</p>
 </section>
-<section id="class-structure" class="slide level2">
-<h2>Class Structure</h2>
+<section id="learning-objectives" class="slide level2">
+<h2>Learning objectives:</h2>
 <ul>
-<li><strong>Dataset</strong>: We will provide students with an image dataset with Greek artworks of different categories, downloaded from <a href="https://harvardartmuseums.org/collections">Harvard Art Museum Collections</a>.</li>
-<li>Provided computational resources permit, we will provide students with code templates and let them run the code themselves. If time permits, they can also try to embed other images they are interested in.</li>
-<li>We will begin by introducing the basic image loading and the traditional image representations through <strong>color histograms</strong> to demonstrate the basic concepts of image features to students.</li>
-<li>For image embedding task, the notebook will use <strong><a href="https://huggingface.co/openai/clip-vit-base-patch32">OpenAI CLIP</a></strong> base patch model, and focus solely on its applications instead of its principles, the key ideas will all be presented through visualizations (scatterplots, histograms and the image itself).</li>
-<li>We will refer to ideas from the book <em>Computational Formalism: Art History and Machine Learning</em> by Amanda Wasielewski to demonstrate some interesting applications of machine learning in visual art studies.</li>
-<li>We will briefly introduce the key applications here and elaborate on them in subsequent notes, including <strong>similarity analysis</strong>, <strong>cluster analysis</strong>, and <strong>classification analysis</strong>.</li>
+<li><p>Understand how Machine learning tools can enrich or challenge existing archeological narratives by contrasting against older historical narratives (LO5).</p></li>
+<li><p>Understand how surface-level analyses can mislead both researchers and machine learning tools into making invalid historical arguments (LO4): Ex; Is a given tablet truely a economic text, or is it simply a legal text with economic language?</p></li>
+<li><p>Learn to priotirize the importance of interpretations grounded in multiple lines of evidence such as linguistic markers and material context (LO5).</p></li>
+<li><p>Learn a bit more about the modern machine-learning techniques used to understand textual archeological data (LO1-LO3).</p></li>
 </ul>
 </section>
 <section id="key-features-and-results" class="slide level2">
 <h2>Key Features and Results</h2>
-<ul>
-<li>Basic, Practical and Generalizable Concepts in Multi-fields</li>
-</ul>
 <div class="columns">
-<div class="column" style="width:35%;">
+<div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/color_histogram_example.png"></p>
-<figcaption>Color Histogram</figcaption>
+<p><img data-src="images/predicting_time_period.png" style="width:100.0%"></p>
+<figcaption>Image source: Bogacz and Mara (2020)</figcaption>
 </figure>
 </div>
-</div><div class="column" style="width:65%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/CNN_example.jpg"></p>
-<figcaption>Principles of CNN</figcaption>
-</figure>
-</div>
+</div><div class="column" style="width:50%;">
+<p>Using a pretrained convolutional neural network, students will be able to classify a wide collection of cuneiform tablets by their location of origin, approximate age, and topic inscribed in the tablets. Students would discover how models differentiate between different types of classes through various types of evidence (linguistic markers such as vocabulary and sentence structures, as well as visual markers such as tablet shape, clay textures, and color variation), and how all those pieces of evidence come together to form a concrete label.</p>
 </div></div>
-<ul>
-<li>Connecting to Cutting-edge Research</li>
-</ul>
-<div style="font-size: 80%;">
-<p>&nbsp;&nbsp;&nbsp;&nbsp; Wasielewski, A. (2023). Computational Formalism: Art History and Machine Learning. The MIT Press. <a href="https://doi.org/10.7551/mitpress/14268.001.0001" class="uri">https://doi.org/10.7551/mitpress/14268.001.0001</a></p>
-</div>
-<div style="font-size: 80%;">
-<p>&nbsp;&nbsp;&nbsp;&nbsp; Wang, J. Z., &amp; Adams, R. B., Jr.&nbsp;(Eds.). (2024). Modeling visual aesthetics, emotion, and artistic style. Springer. <a href="https://doi.org/10.1007/978-3-031-50269-9" class="uri">https://doi.org/10.1007/978-3-031-50269-9</a></p>
-</div>
-<!-- ![](image.png){.absolute top=0 left=0 height="230" width="200"} -->
 </section>
-<section id="notebook-2-introduction-to-computational-formalism" class="slide level2">
-<h2>Notebook 2: Introduction to Computational Formalism</h2>
-<p><strong>Learning Outcomes</strong>: Through this class, students will</p>
-<ul>
-<li>understand the concept of <strong>formalism</strong> in the context of art studies</li>
-<li>understand the basic techniques of <strong>computational formalism</strong> and describe how it differ from “traditional” formalism</li>
-<li>explore an example of Greek artifacts, applying the methodology and interpret the result</li>
-<li>critically analyze the pros and cons of formalism and computational formalism, and explain how to integrate these techniques with archaeology.</li>
-</ul>
-</section>
-<section id="class-structure-1" class="slide level2">
-<h2>Class Structure</h2>
-<ul>
-<li><strong>Dataset:</strong> We will provide students with a dataset of images of ancient Greek sculptures from the <a href="https://harvardartmuseums.org/collections">Harvard Art Museums</a>, covering different periods (from the 18th century BCE to the 4th century BCE), accompanied by metadata containing relevant information of these sculptures for students to explore.</li>
-<li>We will first create the <strong>image embedding</strong> of this dataset using <strong><a href="https://huggingface.co/openai/clip-vit-base-patch32">OpenAI CLIP</a></strong> base patch model, and cluster the images to see if any interesting patterns are observed. Here we would also introduce the concept of <strong>Bag of Visual Words</strong> that we create based on clustering.</li>
-<li>We will then show how we can discover the <strong>principal component</strong> of the embeddings representing the century or genre of sculptures through image classification.</li>
-<li>Then based on the created embeddings, we will demonstrate how we can summarize the extracted <strong>Bag of Visual Words</strong> into human-readable language using large language models.</li>
-</ul>
-</section>
-<section id="key-features-and-results-1" class="slide level2">
-<h2>Key Features and Results</h2>
-<ul>
-<li>Continuation of the Previous Topic with a Practical Example</li>
-</ul>
-<div class="columns">
-<div class="column" style="width:25%;">
-<p><img data-src="images/greek_sculpture_example1.jpg"></p>
-</div><div class="column" style="width:45%;">
-<p><img data-src="images/greek_sculpture_example2.jpg"></p>
-</div></div>
-<div style="font-size: 60%;">
-<p>Source: Harvard Art Museum</p>
-</div>
-<ul>
-<li>Supplement to the Course’s Original Context-based Classical Art Research Methods.</li>
-</ul>
-<div style="font-size: 80%;">
-<blockquote>
-<p>Drawing from the analysis of machine learning in art history described in this book, one might begin to reimagine “digital” art history outside of the technology-specific paradigm in which it has been placed.</p>
-</blockquote>
-<pre><code>                                                            -- Computational Formalism: Art History and Machine Learning</code></pre>
-</div>
-</section>
-<section id="reference" class="slide level2">
-<h2>Reference</h2>
-<ul>
-<li><a href="https://www.pinecone.io/learn/series/image-search/">Pinecone: Embedding Methods for Image Search</a></li>
-<li>Wasielewski, A. (2023). Computational Formalism: Art History and Machine Learning. The MIT Press. <a href="https://doi.org/10.7551/mitpress/14268.001.0001" class="uri">https://doi.org/10.7551/mitpress/14268.001.0001</a></li>
-<li>Wang, J. Z., &amp; Adams, R. B., Jr.&nbsp;(Eds.). (2024). Modeling Visual Aesthetics, Emotion, and Artistic Style. Cham, Switzerland: Springer Nature. <a href="https://doi.org/10.1007/978-3-031-50269-9" class="uri">https://doi.org/10.1007/978-3-031-50269-9</a></li>
-</ul>
+<section id="notebook-3-cnns-continued-using-cnns-to-find-hidden-archeological-sites" class="slide level2">
+<h2>Notebook 3: CNNs continued: using CNNs to find hidden archeological sites</h2>
 
 </section>
     </div>
@@ -264,19 +193,19 @@ Kaiyan Zhang, Krishaant Pathman, Irene Berezin
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="amne376_presentation_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="amne170_presentation_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="amne376_presentation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="amne376_presentation_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="amne376_presentation_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="amne376_presentation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="amne376_presentation_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="amne170_presentation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="amne170_presentation_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="amne170_presentation_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="amne170_presentation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="amne170_presentation_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="amne376_presentation_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="amne376_presentation_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="amne376_presentation_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="amne376_presentation_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="amne170_presentation_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="amne170_presentation_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="amne170_presentation_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="amne170_presentation_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>

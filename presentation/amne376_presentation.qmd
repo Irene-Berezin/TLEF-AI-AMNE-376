@@ -67,6 +67,7 @@ By integrating modern analytical techniques, we can uncover layers of significan
 
 <!-- ![](image.png){.absolute top=0 left=0 height="230" width="200"} -->
 
+
 ## Notebook 2: Introduction to Computational Formalism
 
 **Learning Outcomes**: Through this class, students will
