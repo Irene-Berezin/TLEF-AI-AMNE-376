@@ -1,6 +1,6 @@
 ---
 title: "AMNE 170"
-subtitle: "integrating machine learning into archeological research"
+subtitle: "Integrating machine learning into archeological research"
 author: "Irene Berezin, Yash Mali, Nathan Zhang"
 format: 
     revealjs:
