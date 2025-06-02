@@ -1,0 +1,42 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/ids-srv/css/mirador-combined.css">
+  <link rel="stylesheet" type="text/css" href="/ids-srv/css/prod.css">
+  <link rel="stylesheet" type="text/css" href="/ids-srv/css/slicknav.min.css"> 
+  <script src="/ids-srv/js/jquery-1.11.3.min.js" type="text/javascript"></script>
+  <script src="/ids-srv/js/jquery.slicknav.min.js"></script>
+  <title>IDS Error:  (404) </title>
+  <script>
+   <!--
+   $(function() {
+	$('.user-buttons').slicknav({
+          label: 'Menu',
+          prependTo: '.mirador-main-menu-bar'
+  	});
+   });
+   -->
+  </script>
+<head>
+<body>
+<div class="mirador-main-menu-bar"> 
+
+<div class="slicknav_menu"><a href="#" aria-haspopup="true" tabindex="0" class="slicknav_btn slicknav_collapsed"><ul class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu" style="display: none;"><li><a class="help" href="#no-op" role="menuitem" tabindex="-1"><span class="fa fa-question-circle"></span> Help</a></li></ul></div>
+
+
+<ul class="user-logo mirador-main-menu"><li><a id="harvard-bug" href="http://lib.harvard.edu">Harvard Library</a></li></ul>
+<ul class="user-buttons mirador-main-menu"><li><a class="help" href="https://wiki.harvard.edu/confluence/pages/viewpage.action?pageId=200934631"><span class="fa fa-question-circle"></span> Help</a></li></ul>
+</div>
+<p>
+<br>
+<div>
+<p/>
+<center>
+<h2>Image metadata for id 43352570 not found.</h2> 
+<p/>
+<br>
+<h3>(HTTP Error Code 404)</h3>
+</center>
+</div>
+
+</body>
+</html>

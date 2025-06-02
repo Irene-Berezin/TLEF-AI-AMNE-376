@@ -6,8 +6,8 @@
 <script src="amne376_presentation_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="amne376_presentation_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="amne376_presentation_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="amne376_presentation_files/libs/quarto-html/quarto-syntax-highlighting-48ffa3e5b9d089919c6712c39e5b00f2.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.6.41">
+<link href="amne376_presentation_files/libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.40">
 
   <meta name="author" content="Kaiyan Zhang, Krishaant Pathman, Irene Berezin">
   <title>AMNE 376</title>
@@ -29,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="amne376_presentation_files/libs/revealjs/dist/theme/quarto-44d8b2c47ab6f56f3cb719c452e49cec.css">
+  <link rel="stylesheet" href="amne376_presentation_files/libs/revealjs/dist/theme/quarto-06273e61f1f04043d27f5a4ba8912ce7.css">
   <link href="amne376_presentation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="amne376_presentation_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="amne376_presentation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -174,11 +174,25 @@ Kaiyan Zhang, Krishaant Pathman, Irene Berezin
 <section id="key-features-and-results" class="slide level2">
 <h2>Key Features and Results</h2>
 <ul>
-<li>Practical and General Concepts</li>
+<li>Basic, Practical and Generalizable Concepts in Multi-fields</li>
 </ul>
-<div class="column" style="width:60%;">
+<div class="columns">
+<div class="column" style="width:35%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/color_histogram_example.png"></p>
+<figcaption>Color Histogram</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:65%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
 <p><img data-src="images/CNN_example.jpg"></p>
-</div><ul>
+<figcaption>Principles of CNN</figcaption>
+</figure>
+</div>
+</div></div>
+<ul>
 <li>Connecting to Cutting-edge Research</li>
 </ul>
 <div style="font-size: 80%;">
@@ -189,11 +203,55 @@ Kaiyan Zhang, Krishaant Pathman, Irene Berezin
 </div>
 <!-- ![](image.png){.absolute top=0 left=0 height="230" width="200"} -->
 </section>
+<section id="notebook-2-introduction-to-computational-formalism" class="slide level2">
+<h2>Notebook 2: Introduction to Computational Formalism</h2>
+<p><strong>Learning Outcomes</strong>: Through this class, students will</p>
+<ul>
+<li>understand the concept of <strong>formalism</strong> in the context of art studies</li>
+<li>understand the basic techniques of <strong>computational formalism</strong> and describe how it differ from “traditional” formalism</li>
+<li>explore an example of Greek artifacts, applying the methodology and interpret the result</li>
+<li>critically analyze the pros and cons of formalism and computational formalism, and explain how to integrate these techniques with archaeology.</li>
+</ul>
+</section>
+<section id="class-structure-1" class="slide level2">
+<h2>Class Structure</h2>
+<ul>
+<li><strong>Dataset:</strong> We will provide students with a dataset of images of ancient Greek sculptures from the <a href="https://harvardartmuseums.org/collections">Harvard Art Museums</a>, covering different periods (from the 18th century BCE to the 4th century BCE), accompanied by metadata containing relevant information of these sculptures for students to explore.</li>
+<li>We will first create the <strong>image embedding</strong> of this dataset using <strong><a href="https://huggingface.co/openai/clip-vit-base-patch32">OpenAI CLIP</a></strong> base patch model, and cluster the images to see if any interesting patterns are observed. Here we would also introduce the concept of <strong>Bag of Visual Words</strong> that we create based on clustering.</li>
+<li>We will then show how we can discover the <strong>principal component</strong> of the embeddings representing the century or genre of sculptures through image classification.</li>
+<li>Then based on the created embeddings, we will demonstrate how we can summarize the extracted <strong>Bag of Visual Words</strong> into human-readable language using large language models.</li>
+</ul>
+</section>
+<section id="key-features-and-results-1" class="slide level2">
+<h2>Key Features and Results</h2>
+<ul>
+<li>Continuation of the Previous Topic with a Practical Example</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:25%;">
+<p><img data-src="images/greek_sculpture_example1.jpg"></p>
+</div><div class="column" style="width:45%;">
+<p><img data-src="images/greek_sculpture_example2.jpg"></p>
+</div></div>
+<div style="font-size: 60%;">
+<p>Source: Harvard Art Museum</p>
+</div>
+<ul>
+<li>Supplement to the Course’s Original Context-based Classical Art Research Methods.</li>
+</ul>
+<div style="font-size: 80%;">
+<blockquote>
+<p>Drawing from the analysis of machine learning in art history described in this book, one might begin to reimagine “digital” art history outside of the technology-specific paradigm in which it has been placed.</p>
+</blockquote>
+<pre><code>                                                            -- Computational Formalism: Art History and Machine Learning</code></pre>
+</div>
+</section>
 <section id="reference" class="slide level2">
 <h2>Reference</h2>
 <ul>
 <li><a href="https://www.pinecone.io/learn/series/image-search/">Pinecone: Embedding Methods for Image Search</a></li>
 <li>Wasielewski, A. (2023). Computational Formalism: Art History and Machine Learning. The MIT Press. <a href="https://doi.org/10.7551/mitpress/14268.001.0001" class="uri">https://doi.org/10.7551/mitpress/14268.001.0001</a></li>
+<li>Wang, J. Z., &amp; Adams, R. B., Jr.&nbsp;(Eds.). (2024). Modeling Visual Aesthetics, Emotion, and Artistic Style. Cham, Switzerland: Springer Nature. <a href="https://doi.org/10.1007/978-3-031-50269-9" class="uri">https://doi.org/10.1007/978-3-031-50269-9</a></li>
 </ul>
 
 </section>
