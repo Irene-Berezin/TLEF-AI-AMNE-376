@@ -28,6 +28,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="amne170_presentation_files/libs/revealjs/dist/theme/quarto-1aad10c3c84ecd8b0758ab35bab1eb51.css">
   <link rel="stylesheet" href="fig_captions.scss">
@@ -143,6 +208,230 @@ Irene Berezin, Yash Mali, Nathan Zhang
 </section>
 <section id="introduction" class="slide level2">
 <h2>Introduction</h2>
+<p>Modern day archeology often involves working with massive repositories of images, geospacial datasets, and textual corpora. Traditional aproaches, while still increadibly valuable, can not only be slow, but sometimes ineffective at revelaing the relationships and patterns archeologists are looking for. Machine learning for archeology helps uncover relationships in archeological data that would be incredibly difficult to spot with the naked eye: from hidden structures under forests to small changes in handwritting in cuneiform scripts. Our aim is hence to show how machine learning tools directly fit into an archeologist’s toolbox.</p>
+<div class="columns">
+<div class="column" style="width:100%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/maya.png" style="width:500.0%"></p>
+<figcaption>CNNs have helped uncover hundreds of new geoglyphs in Peru. Image source: The Guardian</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="notebook-0-applications-of-ai-in-archaeology" class="slide level2">
+<h2>Notebook 0: Applications of AI in Archaeology</h2>
+<h3 id="learning-outcomes">Learning Outcomes</h3>
+<ul>
+<li>Understand the role of AI in archaeology<br>
+</li>
+<li>Categorize key AI methods (e.g., CNNs, transformers, clustering)<br>
+</li>
+<li>Analyze archaeological data through the lens of AI<br>
+</li>
+<li>Understand that these methods have broad applications (not just a neat trick !)</li>
+</ul>
+</section>
+<section id="class-structure" class="slide level2">
+<h2>Class Structure</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Segment</th>
+<th>Time</th>
+<th>Activity Type</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Intro to AI in Archaeology</td>
+<td>10 min</td>
+<td>Lecture</td>
+</tr>
+<tr class="even">
+<td>Key Application Areas</td>
+<td>10 min</td>
+<td>Visual Walkthrough</td>
+</tr>
+<tr class="odd">
+<td>Case Study: Lost City Mapping</td>
+<td>10 min</td>
+<td>Model Q&amp;A</td>
+</tr>
+<tr class="even">
+<td>Match Task to AI Model</td>
+<td>10 min</td>
+<td>Group Exercise</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="applications-of-ai" class="slide level2">
+<h2>Applications of AI</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 31%">
+<col style="width: 43%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Application Area</th>
+<th>AI Method Used</th>
+<th>Example Project</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Image classification</td>
+<td>CNNs</td>
+<td>(notebook2) Cuneiform tablets, wall paintings</td>
+</tr>
+<tr class="even">
+<td>Text translation</td>
+<td>Transformers (BERT)</td>
+<td>Akkadian/Cuneiform</td>
+</tr>
+<tr class="odd">
+<td>Artifact clustering</td>
+<td>K-Means</td>
+<td>Grouping tools by use or form</td>
+</tr>
+<tr class="even">
+<td>Predictive modeling</td>
+<td>Regression</td>
+<td>(notebook4) Estimating age from skeletal data</td>
+</tr>
+<tr class="odd">
+<td>Satellite mapping</td>
+<td>Object Detection (CNN)</td>
+<td>Finding lost cities in Mesopotamia ()</td>
+</tr>
+</tbody>
+</table>
+<!-- 
+For the satellite mapping one, we could create a notebook that students just run through, just so they can see what its like even if they might not understand how it works  -->
+</section>
+<section id="match-task-to-model" class="slide level2">
+<h2>Match Task to Model</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 59%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Task</th>
+<th>Best AI Model</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Classify tablets into genre</td>
+<td>CNN</td>
+</tr>
+<tr class="even">
+<td>Translate Akkadian inscriptions</td>
+<td>Transformer (e.g.&nbsp;BERT)</td>
+</tr>
+<tr class="odd">
+<td>Group arrowheads by shape</td>
+<td>Clustering (K-Means)</td>
+</tr>
+<tr class="even">
+<td>Identify temples in aerial images</td>
+<td>CNN / Object Detection</td>
+</tr>
+<tr class="odd">
+<td>Predict age from bones</td>
+<td>Regression</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="notebook-1-zero-shot-classification" class="slide level2">
+<h2>Notebook 1: Zero-Shot Classification</h2>
+<p>Students use a <strong>pre-trained LLM</strong> to classify ancient cuneiform texts without training — zero-shot classification. Here is a notebook <a href="https://colab.research.google.com/drive/1mD6A0TZARr7bAaKUfNvrXLvgkpgFo99t?usp=sharing">demo</a></p>
+<h3 id="learning-outcome">Learning Outcome:</h3>
+<ul>
+<li>Students understand classification logic using language model reasoning.</li>
+<li>Students will use the model to guess :
+<ul>
+<li>What kind of document it is (e.g., legal, economic, literary)</li>
+<li>Where it might come from (e.g., Nippur, Uruk)</li>
+</ul></li>
+</ul>
+</section>
+<section id="class-sturcture" class="slide level2">
+<h2>Class sturcture</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 53%">
+<col style="width: 9%">
+<col style="width: 37%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Segment</th>
+<th>Time</th>
+<th>Activity Type</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Introduce classification using vector example [demo]</td>
+<td>15 min</td>
+<td>Lecture</td>
+</tr>
+<tr class="even">
+<td>Introduce pre-trained model, loading and setup</td>
+<td>10 min</td>
+<td>Code Demo</td>
+</tr>
+<tr class="odd">
+<td>Hands-On session</td>
+<td>20 min</td>
+<td>Students work through notebook</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="key-features-and-resutlts" class="slide level2">
+<h2>Key features and resutlts :</h2>
+<h3 id="zero-shot-classification-demo">Zero-Shot Classification (Demo)</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="im">from</span> transformers <span class="im">import</span> pipeline</span>
+<span id="cb1-2"><a href=""></a></span>
+<span id="cb1-3"><a href=""></a><span class="co"># Step 1: Load the classifier</span></span>
+<span id="cb1-4"><a href=""></a>classifier <span class="op">=</span> pipeline(<span class="st">"zero-shot-classification"</span>, model<span class="op">=</span><span class="st">"facebook/bart-large-mnli"</span>)</span>
+<span id="cb1-5"><a href=""></a></span>
+<span id="cb1-6"><a href=""></a><span class="co"># Step 2: Try classifying a cuneiform text</span></span>
+<span id="cb1-7"><a href=""></a>text <span class="op">=</span> <span class="st">"grain delivery to Lagash recorded by Ensi"</span></span>
+<span id="cb1-8"><a href=""></a>labels <span class="op">=</span> [<span class="st">"economic"</span>, <span class="st">"legal"</span>, <span class="st">"religious"</span>, <span class="st">"literary"</span>]</span>
+<span id="cb1-9"><a href=""></a>result <span class="op">=</span> classifier(text, candidate_labels<span class="op">=</span>labels)</span>
+<span id="cb1-10"><a href=""></a><span class="bu">print</span>(<span class="st">"Prediction:"</span>, result[<span class="st">"labels"</span>][<span class="dv">0</span>])</span>
+<span id="cb1-11"><a href=""></a><span class="bu">print</span>(<span class="st">"Scores:"</span>, <span class="bu">list</span>(<span class="bu">zip</span>(result[<span class="st">"labels"</span>], result[<span class="st">"scores"</span>])))</span>
+<span id="cb1-12"><a href=""></a><span class="co"># Output:</span></span>
+<span id="cb1-13"><a href=""></a><span class="co"># Prediction: economic</span></span>
+<span id="cb1-14"><a href=""></a><span class="co"># Scores: [('economic', 0.78), ('legal', 0.12), ('religious', 0.07), ('literary', 0.03)]</span></span>
+<span id="cb1-15"><a href=""></a></span>
+<span id="cb1-16"><a href=""></a></span>
+<span id="cb1-17"><a href=""></a><span class="co"># Step 3: Try your own input</span></span>
+<span id="cb1-18"><a href=""></a>text <span class="op">=</span> <span class="st">"Gilgamesh speaks with Utnapishtim about the secret of eternal life"</span></span>
+<span id="cb1-19"><a href=""></a>result <span class="op">=</span> classifier(text, candidate_labels<span class="op">=</span>labels)</span>
+<span id="cb1-20"><a href=""></a><span class="bu">print</span>(<span class="st">"Prediction:"</span>, result[<span class="st">"labels"</span>][<span class="dv">0</span>])</span>
+<span id="cb1-21"><a href=""></a><span class="co"># Output:</span></span>
+<span id="cb1-22"><a href=""></a><span class="co"># Prediction: literary</span></span>
+<span id="cb1-23"><a href=""></a><span class="co"># Scores: [('literary', 0.87), ('religious', 0.10), ('legal', 0.02), ('economic', 0.01)]</span></span>
+<span id="cb1-24"><a href=""></a></span>
+<span id="cb1-25"><a href=""></a></span>
+<span id="cb1-26"><a href=""></a><span class="co"># Step 4: Predict provenance</span></span>
+<span id="cb1-27"><a href=""></a>geo_labels <span class="op">=</span> [<span class="st">"Lagash"</span>, <span class="st">"Nippur"</span>, <span class="st">"Uruk"</span>, <span class="st">"Babylon"</span>]</span>
+<span id="cb1-28"><a href=""></a>text <span class="op">=</span> <span class="st">"temple donation recorded by the priest of Nippur"</span></span>
+<span id="cb1-29"><a href=""></a>result <span class="op">=</span> classifier(text, candidate_labels<span class="op">=</span>geo_labels)</span>
+<span id="cb1-30"><a href=""></a><span class="bu">print</span>(<span class="st">"Likely origin:"</span>, result[<span class="st">"labels"</span>][<span class="dv">0</span>])</span>
+<span id="cb1-31"><a href=""></a><span class="co"># Output:</span></span>
+<span id="cb1-32"><a href=""></a><span class="co"># Likely origin: Nippur</span></span>
+<span id="cb1-33"><a href=""></a><span class="co"># Scores: [('Nippur', 0.91), ('Uruk', 0.05), ('Lagash', 0.03), ('Babylon', 0.01)]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="notebook-2-classification-of-cuneiform-tablets-using-machine-learning" class="slide level2">
 <h2>Notebook 2: Classification of cuneiform tablets using Machine Learning</h2>
@@ -181,8 +470,109 @@ Irene Berezin, Yash Mali, Nathan Zhang
 <p>Using a pretrained convolutional neural network, students will be able to classify a wide collection of cuneiform tablets by their location of origin, approximate age, and topic inscribed in the tablets. Students would discover how models differentiate between different types of classes through various types of evidence (linguistic markers such as vocabulary and sentence structures, as well as visual markers such as tablet shape, clay textures, and color variation), and how all those pieces of evidence come together to form a concrete label.</p>
 </div></div>
 </section>
-<section id="notebook-3-cnns-continued-using-cnns-to-find-hidden-archeological-sites" class="slide level2">
-<h2>Notebook 3: CNNs continued: using CNNs to find hidden archeological sites</h2>
+<section id="notebook-3-regression---predicting-age-of-skeletons-from-bone-data" class="slide level2">
+<h2>Notebook 3 : Regression - predicting age of skeletons from bone data</h2>
+<h3 id="learning-outcome-1">Learning Outcome:</h3>
+<ul>
+<li>Students will load a dataset of skeletal measurements and use regression to predict age-at-death</li>
+<li>Students will understand the concept behind regression and why its a useul technique in archaeology</li>
+</ul>
+<h3 id="class-structure-1">Class Structure</h3>
+<table class="caption-top">
+<colgroup>
+<col style="width: 65%">
+<col style="width: 8%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Segment</th>
+<th>Time</th>
+<th>Activity Type</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Introduction of applications of regression in archaeology (eg. stratigraphy)</td>
+<td>10 min</td>
+<td>Lecture</td>
+</tr>
+<tr class="even">
+<td>Overview of dataset (bone_data.txt) and variables</td>
+<td>10 min</td>
+<td>Lecture + Discussion</td>
+</tr>
+<tr class="odd">
+<td>Regression basics refresher (target + predictors)</td>
+<td>10 min</td>
+<td>Lecture</td>
+</tr>
+<tr class="even">
+<td>Load and explore the dataset</td>
+<td>5 min</td>
+<td>Code Demo</td>
+</tr>
+<tr class="odd">
+<td>Hands-on student coding (explore, modify model)</td>
+<td>25 min</td>
+<td>In-class activity</td>
+</tr>
+<tr class="even">
+<td>Discussion: interpreting results + anthropological limits</td>
+<td>10 min</td>
+<td>In-class activity</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="notebook-4-build-your-own-llm" class="slide level2">
+<h2>Notebook 4 : Build your own LLM !</h2>
+<!-- Maybe this was not as great an idea as I initially thought it to be  -->
+<h3 id="learning-outcome-2">Learning Outcome:</h3>
+<ul>
+<li>Students will be able to create an LLM that is based on only the material they provide</li>
+<li>Help students understand biasies LLMs have on historical narratives.</li>
+<li>Students understand that LLMs are pattern matchers, not intelligent historians</li>
+</ul>
+</section>
+<section id="class-strucutre" class="slide level2">
+<h2>Class Strucutre :</h2>
+<p>Create a notebook where students can upload a corpus (2-3 texts). Load into a notebook using llama and ask the model questions related to their research topic. Make sure students become critically aware of how they are using AI.&nbsp;</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 53%">
+<col style="width: 9%">
+<col style="width: 37%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Segment</th>
+<th>Time</th>
+<th>Activity Type</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Discussing : How LLMs work ?</td>
+<td>15 min</td>
+<td>Lecture</td>
+</tr>
+<tr class="even">
+<td>Comparing ChatGPT vs custom corpus</td>
+<td>10 min</td>
+<td>Code Demo (eg. Ask ChatGPT a question on the Epic of Gilgamesh, then compare with a model queried over just Preziosi’s text or an archaeological field report. Highlight differences. )</td>
+</tr>
+<tr class="odd">
+<td>Code Walkthrough</td>
+<td>20 min</td>
+<td>Students work through notebook</td>
+</tr>
+</tbody>
+</table>
+<p>Students can use custom corpus LLMs in the final paper !</p>
+</section>
+<section id="references" class="slide level2">
+<h2>References</h2>
 
 </section>
     </div>
