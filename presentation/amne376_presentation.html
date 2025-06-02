@@ -166,7 +166,7 @@ Kaiyan Zhang, Krishaant Pathman, Irene Berezin
 <li><strong>Dataset</strong>: We will provide students with an image dataset with Greek artworks of different categories, downloaded from <a href="https://harvardartmuseums.org/collections">Harvard Art Museum Collections</a>.</li>
 <li>Provided computational resources permit, we will provide students with code templates and let them run the code themselves. If time permits, they can also try to embed other images they are interested in.</li>
 <li>We will begin by introducing the basic image loading and the traditional image representations through <strong>color histograms</strong> to demonstrate the basic concepts of image features to students.</li>
-<li>For image embedding task, the notebook will use <strong><a href="https://huggingface.co/openai/clip-vit-base-patch32">OpenAI CLIP</a></strong> base patch model, and focus solely on its applications instead of its principles, the key ideas will all be presented through visualizations (scatterplots, histograms and the image itself).</li>
+<li>For image embedding task, the notebook will use <strong><a href="https://huggingface.co/facebook/dinov2-base">DINO v2</a></strong> base patch model, and focus solely on its applications instead of its principles, the key ideas will all be presented through visualizations (scatterplots, histograms and the image itself).</li>
 <li>We will refer to ideas from the book <em>Computational Formalism: Art History and Machine Learning</em> by Amanda Wasielewski to demonstrate some interesting applications of machine learning in visual art studies.</li>
 <li>We will briefly introduce the key applications here and elaborate on them in subsequent notes, including <strong>similarity analysis</strong>, <strong>cluster analysis</strong>, and <strong>classification analysis</strong>.</li>
 </ul>
@@ -217,7 +217,7 @@ Kaiyan Zhang, Krishaant Pathman, Irene Berezin
 <h2>Class Structure</h2>
 <ul>
 <li><strong>Dataset:</strong> We will provide students with a dataset of images of ancient Greek sculptures from the <a href="https://harvardartmuseums.org/collections">Harvard Art Museums</a>, covering different periods (from the 18th century BCE to the 4th century BCE), accompanied by metadata containing relevant information of these sculptures for students to explore.</li>
-<li>We will first create the <strong>image embedding</strong> of this dataset using <strong><a href="https://huggingface.co/openai/clip-vit-base-patch32">OpenAI CLIP</a></strong> base patch model, and cluster the images to see if any interesting patterns are observed. Here we would also introduce the concept of <strong>Bag of Visual Words</strong> that we create based on clustering.</li>
+<li>We will first create the <strong>image embedding</strong> of this dataset using <strong><a href="https://huggingface.co/facebook/dinov2-base">DINO v2</a></strong> base patch model, and cluster the images to see if any interesting patterns are observed. Here we would also introduce the concept of <strong>Bag of Visual Words</strong> that we create based on clustering.</li>
 <li>We will then show how we can discover the <strong>principal component</strong> of the embeddings representing the century or genre of sculptures through image classification.</li>
 <li>Then based on the created embeddings, we will demonstrate how we can summarize the extracted <strong>Bag of Visual Words</strong> into human-readable language using large language models.</li>
 </ul>
